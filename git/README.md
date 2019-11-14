@@ -12,7 +12,8 @@ To ignore the un-updated files or folders.
 
 It has some steps to finish the operation. At first, you should create a file called *.gitmessage*
 
-- step 1: Install<br/>
+- step 1: Install
+
 Installed globally
 ``` git
   npm install -g commitizen cz-conventional-changelog
@@ -22,7 +23,8 @@ Installed project level
   npm install -D commitizen cz-conventional-changelog
 ```
 
-- step 2: package.json<br/>
+- step 2: package.json
+
 add some information in package.json
 ``` json
   {
