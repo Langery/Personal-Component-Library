@@ -4,15 +4,15 @@ In the folder, I will put some files about the git files. And write the steps.
 
 I will make a menu to show the folder.
 
-> .gitignore
+### .gitignore
 
 To ignore the un-updated files or folders.
 
-> .gitignore
+### .gitmessage
 
 It has some steps to finish the operation. At first, you should create a file called *.gitmessage*
 
-- step 1: Install
+- step 1: Install<br/>
 Installed globally
 ``` git
   npm install -g commitizen cz-conventional-changelog
@@ -22,7 +22,7 @@ Installed project level
   npm install -D commitizen cz-conventional-changelog
 ```
 
-- step 2: package.json
+- step 2: package.json<br/>
 add some information in package.json
 ``` json
   {
@@ -42,3 +42,4 @@ add some information in package.json
   git add .
   git cz
 ```
+
