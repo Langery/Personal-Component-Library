@@ -1,9 +1,7 @@
 // 浅拷贝
 function shallowCopy (obj) {
   let newObj = {}
-  for (let key in obj) {
-    newObj[key] = obj[key]
-  }
+  for (let key in obj) newObj[key] = obj[key]
   return newObj
 }
 
