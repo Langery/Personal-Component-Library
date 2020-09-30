@@ -6,10 +6,7 @@ function setTreeData (data, pCode, code, root) {
       // 返回每一项的子级数组
       return father[code] === child[pCode]
     })
-    if (branchArr.length > 0) {
-      // 如果存在子级，则给父级添加一个children属性，并赋值
-      father.children = branchArr
-    }
+    if (branchArr.length > 0) father.children = branchArr // 如果存在子级，则给父级添加一个children属性，并赋值
     // 返回第一层
     return father[pCode] === root
   })
@@ -21,24 +18,13 @@ function setTreeData (data, pCode, code, root) {
 function setTree (data) {
   // 循环所有项
   let tree = data.filter((father) => {
-    let branchArr = data.filter((child) => {
-      // 返回每一项的子级数组
-      if (father.reasonId) {
-        return father.reasonId === child.reasonPId
-      } else {
-        return father.organCode === child.organPCode
-      }
+    let branchArr = data.filter((child) => { // 返回每一项的子级数组
+      return father.reasonId ? father.reasonId === child.reasonPId : father.organCode === child.organPCode
     })
-    if (branchArr.length > 0) {
-      // 如果存在子级，则给父级添加一个children属性，并赋值
-      father.children = branchArr
-    }
+    if (branchArr.length > 0) father.children = branchArr // 如果存在子级，则给父级添加一个children属性，并赋值
+
     // 返回第一层
-    if (father.reasonId) {
-      return father.reasonPId === '1'
-    } else {
-      return father.organPCode === '-1'
-    }
+    return father.reasonId ? father.reasonPId === '1' : father.organPCode === '-1'
   })
   // 返回树形数据
   return tree

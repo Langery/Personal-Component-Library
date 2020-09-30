@@ -14,14 +14,10 @@ function objDeepClone (obj) {
       return newArr
     } else {
       var newObj = {}
-      for (var key in obj) {
-        newObj[key] = this.objDeepClone(obj[key])
-      }
+      for (var key in obj) newObj[key] = this.objDeepClone(obj[key])
       return newObj
     }
-  } else {
-    return obj
-  }
+  } else { return obj }
 }
 
 // deepClone2
@@ -69,7 +65,5 @@ function objWithTypeDeepClone (obj) {
       }
       return newObj
     }
-  } else {
-    return obj
-  }
+  } else { return obj }
 }

@@ -31,11 +31,10 @@ function otherDeal (sendData) {
   var second = date.getSeconds()
   minute = minute < 10 ? ('0' + minute) : minute
   second = second < 10 ? ('0' + second) : second
-  var fnTime = y + '-' + m + '-' + d + ' ' + h + ':' + minute + ':' + second
-  return fnTime
+  return `${y}-${m}-${d} ${h}:${minute}:${second}`
 }
 
 function timeReturn (sendTime) {
   var d = new Date(sendTime)
-  return d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds()
+  return `${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`
 }
