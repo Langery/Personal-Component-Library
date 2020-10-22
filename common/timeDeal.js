@@ -15,6 +15,7 @@ function timeDeal (data) {
     let fullDate = date < 10 ? `0${date}` : date
     return fullDate
   }
+  // yyyy-mm-dd hh:mm:ss
   return `${year}-${handleTime(month)}-${handleTime(date)} ${handleTime(hour)}%3A${handleTime(min)}%3A${handleTime(sec)}`
 }
 
@@ -31,10 +32,12 @@ function otherDeal (sendData) {
   var second = date.getSeconds()
   minute = minute < 10 ? ('0' + minute) : minute
   second = second < 10 ? ('0' + second) : second
+  // yyyy-mm-dd hh:mm:ss
   return `${y}-${m}-${d} ${h}:${minute}:${second}`
 }
 
 function timeReturn (sendTime) {
   var d = new Date(sendTime)
+  // hh:mm:ss
   return `${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`
 }
