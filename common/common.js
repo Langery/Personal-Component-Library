@@ -1,5 +1,5 @@
 /**
- * [author: shilianghao]
+ * [author: Langery]
  */
 
 function dealType() {
