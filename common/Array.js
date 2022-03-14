@@ -4,10 +4,9 @@
  *    x：目标对象
  */
 
-function dealArr (x, arr) {
+function includesArr (x, arr) {
   if (arr.includes(x)) console.log('x is had in arr;');
 }
-
 
 /**
  * 场景描述：判断是否是数组
@@ -18,4 +17,18 @@ function judgeArr (arr) {
   } else {
     return false;
   }
+}
+
+/**
+ * 数组去重
+ */
+function removalArr (arr) {
+  return [...new Set(arr)];
+}
+
+/**
+ * 字符串去重
+ */
+function removalStr (str) {
+  return [...new Set(str)].join('');
 }
