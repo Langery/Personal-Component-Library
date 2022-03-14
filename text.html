@@ -5,12 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <style type="text/css">
+    *{
+      padding: 0;
+      margin: 0;
+      border: 0;
+    }
+  </style>
 </head>
 <body>
+  <div class="main">
+    <p id="time"></p>
+    <!-- lead into the other pages,and change some attribute -->
+    <object data="page/new.html"></object>
+  </div>
   <script src="./common/timeDeal.js"></script>
   <script>
-    var a = timeDeal()
-    console.log(a)
+    var a = timeDeal();
+    console.log(a);
+    document.getElementById('time').innerHTML = a;
   </script>
 </body>
 </html>

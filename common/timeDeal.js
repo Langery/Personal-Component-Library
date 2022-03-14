@@ -16,7 +16,8 @@ function timeDeal (data) {
     return fullDate
   }
   // yyyy-mm-dd hh:mm:ss
-  return `${year}-${handleTime(month)}-${handleTime(date)} ${handleTime(hour)}%3A${handleTime(min)}%3A${handleTime(sec)}`
+  // return `${year}-${handleTime(month)}-${handleTime(date)} ${handleTime(hour)}%3A${handleTime(min)}%3A${handleTime(sec)}`
+  return `${year}-${handleTime(month)}-${handleTime(date)} ${handleTime(hour)}:${handleTime(min)}:${handleTime(sec)}`
 }
 
 function otherDeal (sendData) {
